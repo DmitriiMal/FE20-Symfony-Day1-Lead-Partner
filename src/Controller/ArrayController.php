@@ -8,11 +8,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ArrayController extends AbstractController
 {
+
+
+
+
+
+
+    ////////////////
+
     #[Route('/array', name: 'app_array')]
     public function index(): Response
     {
-
-
 
         $songs = [
             [
@@ -156,8 +162,6 @@ class ArrayController extends AbstractController
                 'year' => 1981,
             ],
         ];
-
-
 
 
 
