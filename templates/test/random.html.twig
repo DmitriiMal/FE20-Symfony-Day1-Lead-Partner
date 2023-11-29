@@ -1,9 +1,15 @@
 {% extends 'base.html.twig' %} {% block title %}Home{% endblock %} {% block body %}
-<style></style>
+<style>
+  .random {
+    font-size: 20rem;
+  }
+</style>
 
 <div class="container my-5 pt-5">
-  <h1 class="text-center">The random number from 0 to {{ maxNumber }} is</h1>
-  <h1 class="text-center text-danger">{{ randomNumber }}</h1>
+  <h1 class="text-center mt-5">
+    The random number from 0 to <strong>{{ maxNumber }}</strong> is:
+  </h1>
+  <h1 class="text-center text-danger mt-3 random">{{ randomNumber }}</h1>
 </div>
 
 {% endblock %}

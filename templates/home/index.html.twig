@@ -1,7 +1,43 @@
 {% extends 'base.html.twig' %} {% block title %}Home{% endblock %} {% block body %}
-<style></style>
-<div class="container my-5 pt-5">
-  <h1 class="text-center">My new Heading</h1>
+<style>
+  .carousel-item img {
+    height: 95vh;
+  }
+  .carousel-item i {
+    font-size: 5rem;
+  }
+</style>
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    {# <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button> #}
+  </div>
+  <div class="carousel-inner h-100">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://images.unsplash.com/photo-1523201766595-aa6dac7ce0fa?q=80&w=2572&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 object-fit-cover" alt="..." />
+      <div class="mb-5 carousel-caption d-none d-md-block bg-dark text-light rounded-pill opacity-75">
+          <p class=""><i class="fa-brands fa-symfony fa-2xl my-5"></i></i></p>
+        <h1 class="">Welcome to my first Sympony project</h1>
+
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://images.unsplash.com/photo-1502570149819-b2260483d302?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 object-fit-cover" alt="..." />
+      <div class="mb-5 carousel-caption d-none d-md-block bg-light text-dark rounded-pill opacity-75">
+        <h1 class="">Let's generate a random number</h1>
+        <a class="btn btn-dark my-2 rounded-pill" href="/random/30">Get a number</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
 {% endblock %}
