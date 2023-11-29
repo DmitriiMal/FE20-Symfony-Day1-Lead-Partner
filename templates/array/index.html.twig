@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %} {% block title %}Array{% endblock %} {% block body %}
+
+<div class="container my-5 pt-3">
+  <h1 class="text-center my-4">Songs</h1>
+
+  <div class="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3">
+    {% for song in songs %}
+    <div>
+      <div class="card mb-3" style="max-width: 540px; min-height: 230px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src=" {{ imgPath }} " class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ song.title }}</h5>
+              <p class="card-text">Artist: {{ song.artist }}</p>
+              <p class="card-text">Country: {{ song.country }}</p>
+              <p class="card-text">Genre: {{ song.genre }}</p>
+              <p class="card-text">
+                <small class="text-body-secondary">Year: {{ song.year }}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
