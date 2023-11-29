@@ -5,4 +5,45 @@
   <p>{{ varName['name'] }}</p>
   <p>{{ attribute(varName, 'name') }}</p>
 </div>
+
+<hr />
+
+<div class="container my-5">
+  <p>{% set foo1 = 'foo' %} {{ foo1 }}</p>
+  <p>{% set foo2 = [1, 2] %} {{ foo2[0] }}</p>
+  <p>{% set foo3 = {'foo': 'bar'} %} {{ foo3.foo }}</p>
+  <p>{{ foo4[0].foo }}</p>
+  <p>{{ foo4[0]['foo'] }}</p>
+</div>
+
+<hr />
+
+<div class="container my-5">
+  {% set sizes = [34, 36, 38, 40, 42] %}
+
+  {{ sizes|filter(v => v > 38)|join(', ') }}
+
+  <p>Lorem ipsum {{ 'dolor' | upper }} sit amet consectetur adipisicing elit. Accusantium, maxime.</p>
+</div>
+
+<hr />
+
+<div class="container my-5">
+  {# {% for i in range(randomNumber1, randomNumber2) %}
+  {{ i }}, {% endfor %} #} {% for i in range(low=1, high=10, step=2) %} {{ i }}, {% endfor %}
+  <hr />
+
+  {# the first argument is the date format, which defaults to the global date format if null is passed #}
+  {{ "now"|date(null, "Europe/Paris") }}
+  <br />
+  {# or skip the format value by using a named argument for the time zone #}
+  {{ "now"|date(timezone="Europe/Paris") }}
+  <br />
+  {{ "now"|date('d/m/Y H:i', timezone="Europe/Paris") }}
+</div>
+
+<hr />
+
+<div class="container my-5"></div>
+
 {% endblock %}
