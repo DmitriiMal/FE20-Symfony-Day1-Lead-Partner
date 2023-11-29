@@ -23,7 +23,8 @@ class TestController extends AbstractController
     {
         $number = random_int(0, $max);
         return $this->render('test/random.html.twig', [
-            'randomNumber' => $number
+            'randomNumber' => $number,
+            'maxNumber' => $max
         ]);
     }
 }
